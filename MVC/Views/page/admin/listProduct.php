@@ -17,7 +17,7 @@
             </div>
             <?php foreach ($data["listProduct"] as $product) { ?>
             <div class="col-sm-12 col-md-12 m-auto row-align m-auto backg-white">
-              <div class="col-md-2 col-sm-2 float-left"><img src=""></div>
+              <div class="col-md-2 col-sm-2 float-left"><img src="/Web-NoiThat/Public/upload/<?php echo $product["picture"]; ?>"></div>
               <div class="col-3 col-md-2 float-left">
                 <p class="float-left text-dark"><?php echo $product["name"]; ?></p>
               </div>
@@ -25,18 +25,12 @@
                 <p class="text-danger"><?php echo $product["price"]; ?> đ</p>
               </div>
               <div class="col-md-2 col-sm-2 float-left">
-                <p><?php echo $product["id_category"]; ?></p>
+                <p><?php echo $product["date"]; ?></p>
               </div>
               <div class="col-md-2 col-sm-2 float-left"><?php echo $product["quantity"]; ?></div>
               <div class="col-2 col-md-2 float-left"><a href="http://localhost/Web-NoiThat/ManagerProduct/deleteProduct/<?php echo $product["id"]?>">Xóa</a> | <a href="http://localhost/Web-NoiThat/ManagerProduct/pageUpdateProduct/<?php echo $product["id"]?>">Sửa</a> </div>
             </div>
           <?php }?>
-            <div class="col-lg-12 mt-3">
-              <ul class="pagination justify-content-center">
-                  <li class="page-item"><a class="page-link" style="cursor: pointer;">Previous</a></li>
-                  <li class="page-item"><a class="page-link">{{numPage}}</a></li>
-                  <li class="page-item"><a class="page-link" style="cursor: pointer;">Next</a></li>
-              </ul>
-            </div>
+            
           </div>
       

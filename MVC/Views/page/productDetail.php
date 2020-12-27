@@ -4,13 +4,13 @@
             <div class="description">
                 <div class="image-product">
                     <div class="large-image">
-                        <img src="/Web-NoiThat/Public/upload/120021290_1.jpg" alt="">
+                        <img src="/Web-NoiThat/Public/upload/<?php echo $data["product"][0]["picture"];?>" alt="">
                     </div>
-                    <div class="thumbnail">
+                    <!-- <div class="thumbnail">
                         <img src="/Web-NoiThat/Public/upload/120021290_1.jpg" alt="">
                         <img src="/Web-NoiThat/Public/upload/120021290_1.jpg" alt="">
                         <img src="/Web-NoiThat/Public/upload/120021290_1.jpg" alt="">
-                    </div>
+                    </div> -->
                 </div>
                 <div class="info-product">
                     <p style="display: none" id="idProduct"><?php echo $data["product"][0]["id"]?></p>
@@ -100,11 +100,6 @@
                                     <div class="comment-text">
                                         <p><?php echo $comment["content"]?></p>
                                     </div>
-                                    <div class="activety">
-                                        <a onclick="reply(<?php echo $comment["id"]?>)">Trả Lời</a>
-                                        <a href="">Sửa</a>
-                                        <a href="">Xóa</a><?php echo $comment["parent_id"]?>
-                                    </div>
                                 </div>
                                 <ul style="padding:0 0 0 40px;">
                                     <?php foreach ($data["comment"] as $comment_parent) {
@@ -112,7 +107,7 @@
                                     <li>
                                         <div class="comment-row">
                                             <div class="comment-info">
-                                                <span class="img-user"><img src="/Web-NoiThat/Public/upload/120021290_1.jpg"></span>
+                                                <span class="img-user"><img src="/Web-NoiThat/Public/image/user.jpg"></span>
                                                 <span class="posted-by"><?php echo $comment_parent["user_name"]?></span>
                                                 <span class="posted-at">| Ngày: <?php echo $comment_parent["date"]?></span>
                                             </div>
@@ -121,8 +116,6 @@
                                             </div>
                                             <div class="activety">
                                                 <a onclick="reply(<?php echo $comment["id"]?>)">Trả Lời</a>
-                                                <a href="">Sửa</a>
-                                                <a href="">Xóa</a>
                                             </div>
                                         </div>
                                     </li>
@@ -216,7 +209,7 @@
         <div class="product">
             <div class="card-header">
                 <a href="../page/<?php echo $productByCate["id"]?>">
-                    <img src="/Web-NoiThat/Public/upload/120021290_1.jpg" alt="">
+                    <img src="/Web-NoiThat/Public/upload/<?php echo $productByCate["picture"]?>" alt="">
                 </a>
                 <div class="group-icon">
                     <div>
@@ -290,6 +283,7 @@
                 listItem.push(listCart);
             }
             localStorage.setItem('listCart', JSON.stringify(listItem));
+            alert("Sản Phẩm Đã Được Thêm Vào Giỏ Hàng!")
         })
         $("#quantity").change(function(){
             var quantity = Number($("#quantity").val());
@@ -302,13 +296,13 @@
             var content = $("#content").val();
             var id_product = $("#idProduct").text();
             $.ajax({
-                url:"http://localhost/Web-NoiThat/ProductDetail/Comment",
+                url:"http://localhost/Web-NoiThat/Ajax/Comment",
                 method:"post",
                 data:{content:content,idProduct:id_product,parentId:id_parent},
                 success:function(data){
                     console.log(data);
                   if(data == true){
-                    alert("Cập Nhật Thành Công!")
+                    location.reload()
                   }else{
                     alert("Cập Nhật Thất Bại!")
                   }

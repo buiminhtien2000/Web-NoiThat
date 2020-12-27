@@ -1,7 +1,7 @@
         <div class="row">
             <h2 class="custom-input">Thêm Sản Phẩm</h2>
           </div>
-          <form action="./addProduct" method="post" enctype="multipart/form-data">
+          <form action="./addProduct" method="post" enctype="multipart/form-data" autocomplete="off">
             <p><?php echo $data["message"]?></p>
             <div class="form-row">
               <div class="col-10 col-md-5 custom-input">
@@ -11,10 +11,11 @@
                 <input type="text" class="form-control" placeholder="Giá Sản Phẩm" name="price">
               </div>
               <div class="col-10 col-md-5 custom-input">
-                <select name="category">
-                  <option value="1">tu</option>
-                  <option value="2">tu</option>
-                  <option value="3">tu</option>
+                <select name="category" class="form-control">
+                  <option value="1" selected="selected">Ghế</option>
+                  <option value="2">Tủ</option>
+                  <option value="3">Giường</option>
+                  <option value="4">Bàn</option>
                 </select>
               </div>
               <div class="col-10 col-md-5 custom-input">

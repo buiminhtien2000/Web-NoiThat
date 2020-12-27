@@ -13,6 +13,7 @@
   <script src="https://code.jquery.com/jquery-3.5.1.js"
   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
   crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
 </head> 
 <body>
   <div class="container-fluid">
@@ -21,7 +22,7 @@
         <div class="card">
           <button onclick="show_hidden()" class="float-right">x</button>
           <div class="card-body text-center">
-            <img src="../upload/userPicture/user.png">
+            <img src="/Web-NoiThat/Public/image/user.png">
           </div>
           <div class="card-footer">
             <ul>
@@ -40,13 +41,13 @@
               class="fas fa-clipboard-list"></i> Quản Lý Sản Phẩm <i class="fas fa-angle-down"></i>
             <ul class="navbar-nav collapse" id="productManager">
               <li class="nav-item"><a class="text-white nav-link" href="http://localhost/Web-NoiThat/ManagerProduct/Page">Thêm Sản Phẩm</a></li>
-              <li class="nav-item"><a class="text-white nav-link" href="./listProduct">Danh Sách Sản Phẩm</a></li>
+              <li class="nav-item"><a class="text-white nav-link" href="http://localhost/Web-NoiThat/ManagerProduct/listProduct">Danh Sách Sản Phẩm</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a href="#!managerBill" class="nav-link"><i class="fas fa-file-invoice-dollar"></i>
+          <li class="nav-item"><a href="http://localhost/Web-NoiThat/ManagerBill/Page" class="nav-link"><i class="fas fa-file-invoice-dollar"></i>
               Quản Lý Đơn Hàng</a></li>
-          <li class="nav-item"><a href="#!managerComment" class="nav-link"><i class="fas fa-comments"></i> Quản Lý Bình Luận</a></li>
-          <li class="nav-item"><a href="#!managerAccount" class="nav-link"><i class="fas fa-users"></i> Quản Lý Tài Khoản</a></li>
+          <li class="nav-item"><a href="http://localhost/Web-NoiThat/ManagerComment/ListComment" class="nav-link"><i class="fas fa-comments"></i> Quản Lý Bình Luận</a></li>
+          <li class="nav-item"><a href="http://localhost/Web-NoiThat/Statistics/Page" class="nav-link"><i class="fas fa-chart-area"></i>Thống Kê</a></li>
           <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-question-circle"></i> Trợ Giúp</a></li>
         </ul>
       </div>
@@ -67,7 +68,7 @@
             <a class="nav-link text-white" href="#"><i class="fas fa-cog"></i></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><img src="../upload/userPicture/user.png"></a>
+            <a class="nav-link" href="#"><img src="/Web-NoiThat/Public/image/user.png"></a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown"><?php echo $_SESSION["SessionUser"][1]?></a>

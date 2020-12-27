@@ -1,4 +1,4 @@
-<div class="article" style="background-color: #fafafa;">
+<div class="article" style="background-color: #fafafa; min-height: 250px">
     <div class="cart">
         <table id="tabl">
             <tr>
@@ -43,9 +43,10 @@
                 data:{id:id_bill,status:new_status},
                 success:function(data){
                   if(data == true){
-                    alert("Cập Nhật Thành Công!")
+                    alert("Hủy Thành Công!")
+                    location.reload();
                   }else{
-                    alert("Cập Nhật Thất Bại!")
+                    alert("Hủy Thất Bại!")
                   }
                 }
             })

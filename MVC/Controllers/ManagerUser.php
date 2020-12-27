@@ -28,12 +28,12 @@
 					$user_model = $this->Model("User");
 					$format_extended = $file_processing->check_file_extension($extensions);
 					if($format_extended){
-						$check_size = $file_processing->check_size_file(filesize($tmp_name),100*1024,5*1024*12024);
+						$check_size = $file_processing->check_size_file(filesize($tmp_name),1024,5*1024*12024);
 						if($check_size){
 							$randString = $file_processing->rand_string();
 							$file_name = $randString.".".$extensions;
 							$extension = strtolower(pathinfo($file["name"],PATHINFO_EXTENSION));
-							$path = "D://upload/".$file_name;
+							$path = "D:/workspace/www/Web-NoiThat/Public/upload/".$file_name;
 							move_uploaded_file($tmp_name,$path);
 							$user_model->addUser($name,$account,$password,$birthday,$phone_email,$position$file_name);
 							$result = "Thêm thành công!";

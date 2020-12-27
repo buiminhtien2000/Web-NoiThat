@@ -1,4 +1,4 @@
-<div class="article" style="background-color: #fafafa;">
+<div class="article" style="background-color: #fafafa;min-height: 250px">
     <div class="cart">
         <table id="tabl">
             <tr>
@@ -67,8 +67,9 @@
                 success:function(data){
                     console.log(data)
                     if(data == true){
-                        alert("Thanh Toán Thành Công!")
+                        alert("Thanh Toán Thành Công, Đơn Hàng Sẽ Được Xác Nhận Trong Vòng 24 Giờ!")
                         localStorage.removeItem("listCart");
+                        location.reload();
                     }else{
                         alert("Vui Lòng Đăng Nhập Để Thanh Toán!")
                     }

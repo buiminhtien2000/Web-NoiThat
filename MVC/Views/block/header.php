@@ -47,7 +47,7 @@
                 </div>
                 <div id="FormLogin" class="formSubmit">
                   <h2>Login Form</h2>
-                  <form action="http://localhost/Web-NoiThat/Home/Login" method="post">
+                  <form action="http://localhost/Web-NoiThat/Home/Login" method="post" autocomplete="off">
                     <div class="field">
                       <label for="uname"><b>Username</b></label>
                       <input type="text" placeholder="Enter Username" name="account" required>
@@ -68,7 +68,7 @@
                 </div>
                 <div id="FormRegister" class="formSubmit">
                   <h2>Login Form</h2>
-                  <form action="http://localhost/Web-NoiThat/Home/Register" method="post">
+                  <form action="http://localhost/Web-NoiThat/Home/Register" method="post" autocomplete="off">
                     <div class="field">
                       <label for="uname"><b>FullName</b></label>
                       <input type="text" placeholder="Enter FullName" name="name" required>

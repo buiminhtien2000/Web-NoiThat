@@ -22,7 +22,7 @@
         <div class="product">
             <div class="card-header">
                 <a href="../ProductDentail/<?php echo $product["id"]?>">
-                    <img src="/Web-NoiThat/Public/upload/120021290_1.jpg" alt="">
+                    <img src="/Web-NoiThat/Public/upload/<?php echo $product["picture"];?>" alt="">
                 </a>
                 <div class="group-icon">
                     <div>
@@ -67,7 +67,7 @@
         </div>
     
     </div>
-    <div class="new-product">
+    <!-- <div class="new-product">
         <h3>Sản phẩm bán chạy</h3>
         <div class="product">
             <div class="card-header">
@@ -107,121 +107,7 @@
                 </div>
             </div>
         </div>
-        <div class="product">
-            <div class="card-header">
-                <a href="">
-                    <img src="/Web-NoiThat/Public/upload/120021290_1.jpg" alt="">
-                </a>
-                <div class="group-icon">
-                    <div>
-                        <i class="fa fa-share-alt" aria-hidden="true"></i>
-                    </div>
-                    <div>
-                        <i class="fa fa-heart" aria-hidden="true"></i>
-                    </div>
-                    <div>
-                        <i class="fa fa-commenting" aria-hidden="true"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="card-body">
-                <a href="">
-                    <p>CO-SPENCER Giường 6 Ft. 190x220x90 cm Màu Nâu Đậm</p>
-                </a>
-                <div>
-                    <i class="fa fa-star checked" aria-hidden="true"></i>
-                    <i class="fa fa-star checked" aria-hidden="true"></i>
-                    <i class="fa fa-star checked" aria-hidden="true"></i>
-                    <i class="fa fa-star checked" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-            </div>
-            <div class="card-footer">
-                <div class="price-product">
-                    <p>200.000.000đ</p>
-                </div>
-                <div class="button-buy">
-                    <button>Mua Ngay</button>
-                </div>
-            </div>
-        </div>
-        <div class="product">
-            <div class="card-header">
-                <a href="">
-                    <img src="/Web-NoiThat/Public/upload/120021290_1.jpg" alt="">
-                </a>
-                <div class="group-icon">
-                    <div>
-                        <i class="fa fa-share-alt" aria-hidden="true"></i>
-                    </div>
-                    <div>
-                        <i class="fa fa-heart" aria-hidden="true"></i>
-                    </div>
-                    <div>
-                        <i class="fa fa-commenting" aria-hidden="true"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="card-body">
-                <a href="">
-                    <p>CO-SPENCER Giường 6 Ft. 190x220x90 cm Màu Nâu Đậm</p>
-                </a>
-                <div>
-                    <i class="fa fa-star checked" aria-hidden="true"></i>
-                    <i class="fa fa-star checked" aria-hidden="true"></i>
-                    <i class="fa fa-star checked" aria-hidden="true"></i>
-                    <i class="fa fa-star checked" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-            </div>
-            <div class="card-footer">
-                <div class="price-product">
-                    <p>200.000.000đ</p>
-                </div>
-                <div class="button-buy">
-                    <button>Mua Ngay</button>
-                </div>
-            </div>
-        </div>
-        <div class="product">
-            <div class="card-header">
-                <a href="">
-                    <img src="/Web-NoiThat/Public/upload/120021290_1.jpg" alt="">
-                </a>
-                <div class="group-icon">
-                    <div>
-                        <i class="fa fa-share-alt" aria-hidden="true"></i>
-                    </div>
-                    <div>
-                        <i class="fa fa-heart" aria-hidden="true"></i>
-                    </div>
-                    <div>
-                        <i class="fa fa-commenting" aria-hidden="true"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="card-body">
-                <a href="">
-                    <p>CO-SPENCER Giường 6 Ft. 190x220x90 cm Màu Nâu Đậm</p>
-                </a>
-                <div>
-                    <i class="fa fa-star checked" aria-hidden="true"></i>
-                    <i class="fa fa-star checked" aria-hidden="true"></i>
-                    <i class="fa fa-star checked" aria-hidden="true"></i>
-                    <i class="fa fa-star checked" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-            </div>
-            <div class="card-footer">
-                <div class="price-product">
-                    <p>200.000.000đ</p>
-                </div>
-                <div class="button-buy">
-                    <button>Mua Ngay</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    </div> -->
 </div>
 <script type="text/javascript">
     $(document).ready(function(){

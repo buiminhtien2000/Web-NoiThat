@@ -29,12 +29,12 @@
 				$product_model = $this->Model("Product");
 				$format_extended = $file_processing->check_file_extension($extensions);
 				if($format_extended){
-					$check_size = $file_processing->check_size_file(filesize($tmp_name),10*1024,5*1024*1024);
+					$check_size = $file_processing->check_size_file(filesize($tmp_name),1024,5*1024*1024);
 					if($check_size){
 						$randString = $file_processing->rand_string();
 						$file_name = $randString.".".$extensions;
 						$extension = strtolower(pathinfo($file["name"],PATHINFO_EXTENSION));
-						$path = "D://upload/".$file_name;
+						$path = "D:/workspace/www/Web-NoiThat/Public/upload/".$file_name;
 						move_uploaded_file($tmp_name,$path);
 						$product_model->addProduct($name,$price,$file_name,$category,$quantity,$description);
 						$result = "Thêm thành công!";
@@ -68,12 +68,12 @@
 					$extensions = strtolower(pathinfo($file["name"],PATHINFO_EXTENSION));
 					$format_extended = $file_processing->check_file_extension($extensions);
 					if($format_extended){
-						$check_size = $file_processing->check_size_file(filesize($tmp_name),100*1024,5*1024*12024);
+						$check_size = $file_processing->check_size_file(filesize($tmp_name),1024,5*1024*12024);
 						if($check_size){
 							$randString = $file_processing->rand_string();
 							$file_name = $randString.".".$extensions;
 							$extension = strtolower(pathinfo($file["name"],PATHINFO_EXTENSION));
-							$path = "D://upload/".$file_name;
+							$path = "D:/workspace/www/Web-NoiThat/Public/upload/".$file_name;
 							move_uploaded_file($tmp_name,$path);
 							$product_model->updateProduct($id,$name,$price,$file_name,$category,$quantity,$description);
 							$result = "Cập nhật thành công!";
@@ -96,13 +96,13 @@
 		public function deleteProduct($id){
 			$product_model = $this->Model("Product");
 			$product_model->deleteProduct($id);
-			$list_product = $product_model->selectProduct(0,2);
+			$list_product = $product_model->selectProduct(0,10);
 			return $this->View("master2",["page"=>"listProduct","listProduct"=>$list_product,"message"=>"Xóa thành công!"]);
 		}
 		public function listProduct($message=""){
 			$list_product = [];
 			$product_model = $this->Model("Product");
-			$list_product = $product_model->selectProduct(0,2);
+			$list_product = $product_model->selectProduct(0,10);
 			return $this->View("master2",["page"=>"listProduct","listProduct"=>$list_product,"message"=>$message]);
 		}
 	}

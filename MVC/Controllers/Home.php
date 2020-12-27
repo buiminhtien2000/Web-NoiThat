@@ -71,7 +71,7 @@
 			$birthday = $form["birthday"];
 			$phone_email = $form["phoneOrEmail"];
 			$adress = $form["adress"];
-			$position = 1;
+			$position = 0;
 			try {
 				$user_model = $this->Model("User");
 				$user_model->addUser($name,$account,$password,$birthday,$phone_email,$position);
@@ -79,7 +79,7 @@
 			} catch (Exception $e) {
 				$result = "Đăng Ký Thất Bại!";
 			}
-			return $this->View("master1",["page"=>"listProduct"]);
+			header('Location: http://localhost/Web-NoiThat/Home');
 		}
 		public function UpdateAccount(){
 			$file_processing = new FileProcessing();
@@ -100,12 +100,12 @@
 					$extensions = strtolower(pathinfo($file["name"],PATHINFO_EXTENSION));
 					$format_extended = $file_processing->check_file_extension($extensions);
 					if($format_extended){
-						$check_size = $file_processing->check_size_file(filesize($tmp_name),100*1024,5*1024*12024);
+						$check_size = $file_processing->check_size_file(filesize($tmp_name),1024,5*1024*12024);
 						if($check_size){
 							$randString = $file_processing->rand_string();
 							$file_name = $randString.".".$extensions;
 							$extension = strtolower(pathinfo($file["name"],PATHINFO_EXTENSION));
-							$path = "D://upload/userImage".$file_name;
+							$path = "D:/workspace/www/Web-NoiThat/Public/upload/".$file_name;
 							move_uploaded_file($tmp_name,$path);
 							$user_model->updateUser($name,$account,$password,$birthday,$phone_email,$adress,$file_name);
 							$result = "Cập nhật thành công!";

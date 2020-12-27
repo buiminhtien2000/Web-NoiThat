@@ -1,7 +1,6 @@
 <?php 
 	class FileProcessing{
 		public function check_size_file($size,$min,$max){
-			echo $size;
 			$result = false;
 			if($size >= $min && $size <= $max){
 				$result = true;
