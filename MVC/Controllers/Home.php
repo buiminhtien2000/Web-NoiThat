@@ -36,6 +36,9 @@
 				echo false;
 			}
 		}
+		public function PageLogin(){
+			$this->View("login",["message"=>""]);
+		}
 		public function Login(){
 			$file_processing = new FileProcessing();
 			$form = $file_processing->process_input($_POST);
@@ -55,11 +58,15 @@
 					}
 				}else{
 					$message ="Sai Mật Khẩu!";
+					$this->View("login",["message"=>$message]);
 				}
 			}else{
 				$message ="Tài Khoản Không tồn Tại!";
+				$this->View("login",["message"=>$message]);
 			}
-			return $message;
+		}
+		public function PageRegister(){
+			$this->View("register",["message"=>""]);
 		}
 		public function Register(){
 			$file_processing = new FileProcessing();
@@ -75,11 +82,12 @@
 			try {
 				$user_model = $this->Model("User");
 				$user_model->addUser($name,$account,$password,$birthday,$phone_email,$position);
-				$result = "Đăng Ký Thành Công";
+				$result = "Đăng Ký Thành Công!,Đăng Nhập Ngay?";
+				$this->View("register",["message"=>$result]);
 			} catch (Exception $e) {
 				$result = "Đăng Ký Thất Bại!";
+				$this->View("register",["message"=>$result]);
 			}
-			header('Location: http://localhost/Web-NoiThat/Home');
 		}
 		public function UpdateAccount(){
 			$file_processing = new FileProcessing();

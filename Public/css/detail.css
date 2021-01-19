@@ -2,14 +2,14 @@
 	color: orange;
 }
 .article .content{
-	width: 80%;
+	width: 92%;
 	margin: 0 auto;
 	padding: 20px;
 }
 .content .product-detail{
 	float: left;
-	width: 72%;
-	margin-right: 20px;
+	width: 63%;
+	margin-right: 10px;
 }
 .product-detail .description{
 	width: 100%;
@@ -73,11 +73,15 @@
 	color: red;
 }
 .info-product .group-button button{
-	width: 150px;
+	display: block;
+	float: right;
+	width: 200px;
+	margin-top: 5px;
     height: 35px;
     margin-right: 20px;
     text-align: center;
     border: none;
+
 }
 .info-product .group-button .button-buy{
 	background-color: #4646fe;
@@ -117,7 +121,7 @@ h3{
 }
 .content .aside{
 	float: left;
-	width: 25%;
+	width: 35%;
 	padding: 4px;
 	border-radius: 5px;
 	background-color: white;
@@ -240,4 +244,86 @@ h3{
 }
 .comment-content .comment-row .activety a:hover{
 	color: #54545b;
+}
+	/*=================RESPONSIVE Ipad================*/
+@media only screen and (max-width: 992px){
+	.article .content{
+		width: 95%;
+		padding: 10px;
+	}
+	.content .product-detail{
+		width: 100%;
+		margin-right: 10px;
+	}
+	.info-product .product-name p{
+		font-size: 20px;
+	}
+	.info-product .product-price p{
+		font-size: 18px;
+	}
+	.info-product .short-description p{
+		font-size: 18px;
+	}
+	.info-product .totalMoney #total{
+		font-size: 18px;
+	}
+	.info-product .group-button button{
+		display: block;
+		float: right;
+		width: 200px;
+		margin-top: 5px;
+	}
+	.description .image-product .large-image{
+		height:300px;
+	}
+	.description .image-product .large-image img{
+	    height: 300px;
+	}
+	.product-detail .description{
+	    height: 350px;
+	}
+	.content .aside{
+		display: none;
+		width: 35%;
+	}
+}
+/*=================RESPONSIVE mobile================*/
+@media only screen and (max-width: 600px){
+	.article .content{
+		width: 95%;
+		padding: 10px;
+	}
+	.content .product-detail{
+		float: left;
+		width: 100%;
+		margin-right: 20px;
+	}
+	.info-product .product-name p{
+		font-size: 20px;
+	}
+	.info-product .product-price p{
+		font-size: 18px;
+	}
+	.info-product .short-description p{
+		font-size: 18px;
+	}
+	.info-product .totalMoney #total{
+		font-size: 18px;
+	}
+	.info-product .group-button button{
+		display: block;
+		margin-top: 5px;
+	}
+	.description .image-product .large-image{
+		height:300px;
+	}
+	.description .image-product .large-image img{
+	    height: 300px;
+	}
+	.product-detail .description{
+	    height: 350px;
+	}
+	.content .aside{
+		display: none;
+	}
 }

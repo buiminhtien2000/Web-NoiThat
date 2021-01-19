@@ -10,7 +10,7 @@
               </div>
               <div class="col-5 col-md-4 float-left text-center">
                 <p class="text-dark"><?php echo $comment["content"]?></p>
-                <p style="display: none;"><?php echo $comment["id_product"]?></p>
+                <p style="display: none;" id="idProduct"><?php echo $comment["id_product"]?></p>
               </div>
               <div class="col-3 col-md-4 float-left text-center">
                 <a href="#" class="d-inline">Xóa</a> | <a data-toggle="collapse" data-target="#displayDeltail1" class="nav-link d-inline p-0" onclick="reply(<?php echo $comment["id"]?>)">Trả Lời</a>

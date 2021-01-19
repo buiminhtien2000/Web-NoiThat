@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/Web-NoiThat/Public/css/style.css">
     <link rel="stylesheet" type="text/css" href="/Web-NoiThat/Public/css/detail.css">
     <link rel="stylesheet" type="text/css" href="/Web-NoiThat/Public/css/cart.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
@@ -26,9 +26,9 @@
                 <div class="header-icon">
                     <?php if(!isset($_SESSION["SessionUser"])){?>
                     <ul>
-                        <li><a id="login"><i class="fa fa-sign-in" aria-hidden="true"></i> Đăng Nhập</a></li>
+                        <li><a id="login" href="http://localhost/Web-NoiThat/Home/PageLogin"><i class="fa fa-sign-in" aria-hidden="true"></i> Đăng Nhập</a></li>
                         <li>|</li>  
-                        <li><a id="register"><i class="fa fa-registered" aria-hidden="true"></i> Đăng ký</a></li>
+                        <li><a id="register" href="http://localhost/Web-NoiThat/Home/PageRegister"><i class="fa fa-registered" aria-hidden="true"></i> Đăng ký</a></li>
                     </ul>
                     <?php }else{?>
                     <ul>
@@ -45,54 +45,6 @@
                     </ul>
                     <?php }?>
                 </div>
-                <div id="FormLogin" class="formSubmit">
-                  <h2>Login Form</h2>
-                  <form action="http://localhost/Web-NoiThat/Home/Login" method="post" autocomplete="off">
-                    <div class="field">
-                      <label for="uname"><b>Username</b></label>
-                      <input type="text" placeholder="Enter Username" name="account" required>
-
-                      <label for="psw"><b>Password</b></label>
-                      <input type="password" placeholder="Enter Password" name="password" required>
-                          
-                      <button type="submit">Login</button>
-                      <label>
-                        <input type="checkbox" checked="checked" name="remember"> Remember me
-                      </label>
-                    </div>
-                    <div style="background-color:#f1f1f1">
-                      <button type="button" class="cancelbtn">Cancel</button>
-                      <span class="psw">Forgot <a href="#">password?</a></span>
-                    </div>
-                  </form>
-                </div>
-                <div id="FormRegister" class="formSubmit">
-                  <h2>Login Form</h2>
-                  <form action="http://localhost/Web-NoiThat/Home/Register" method="post" autocomplete="off">
-                    <div class="field">
-                      <label for="uname"><b>FullName</b></label>
-                      <input type="text" placeholder="Enter FullName" name="name" required>
-                      <label for="uname"><b>Account</b></label>
-                      <input type="text" placeholder="Enter Account" name="account" required>
-                      <label for="psw"><b>Password</b></label>
-                      <input type="password" placeholder="Enter Password" name="password" required>
-                      <label for="psw"><b>Birthday</b></label>
-                      <input type="date" name="birthday" required>
-                      <label for="uname"><b>Phone or Email</b></label>
-                      <input type="text" placeholder="Enter Phone or Email" name="phoneOrEmail" required>
-                      <label for="psw"><b>Adress</b></label>
-                      <input type="text" placeholder="Enter Adress" name="adress" required>
-                      <button type="submit">Register</button>
-                      <label>
-                        <input type="checkbox" checked="checked" name="remember"> Remember me
-                      </label>
-                    </div>
-                    <div style="background-color:#f1f1f1">
-                      <button type="button" class="cancelbtn">Cancel</button>
-                      <span class="psw">Forgot <a href="#">password?</a></span>
-                    </div>
-                  </form>
-                </div>
             </div>
             <div class="header-bottom">
                 <ul>
@@ -106,7 +58,7 @@
                 </ul>
             </div>
         </div>
-        <script type="text/javascript">
+        <!-- <script type="text/javascript">
             $(document).ready(function(){
               $("#login").click(function display_login(){
                 $("#FormLogin").css({"display":"block"});
@@ -117,4 +69,4 @@
                 $("#FormRegister").css({"display":"block"});
               })
             })
-        </script>
+        </script> -->
